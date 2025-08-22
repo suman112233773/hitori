@@ -63,9 +63,8 @@ server.listen(PORT, () => {
 });
 
 /*
-	* Create By Naze
-	* Follow https://github.com/nazedev
-	* Whatsapp : https://whatsapp.com/channel/0029VaWOkNm7DAWtkvkJBK43
+	* Create By suman
+	* 
 */
 
 async function startNazeBot() {
@@ -345,4 +344,5 @@ fs.watchFile(file, () => {
 	delete require.cache[file]
 	require(file)
 });
+
 
