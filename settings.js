@@ -5,7 +5,7 @@ const chalk = require('chalk');
 
 //~~~~~~~~~~~~< GLOBAL SETTINGS >~~~~~~~~~~~~\\
 
-global.owner = ['917679396342'] //['628','628'] 2 owner atau lebih
+global.owner = ['917679396342'] 
 global.author = 'suman'
 global.botname = 'suman.bot'
 global.packname = 'Bot WhatsApp'
@@ -78,12 +78,4 @@ global.badWords = ['tolol','goblok','asu','pantek','kampret','ngentot','jancok',
 global.chatLength = 1000
 
 //~~~~~~~~~~~~~~~< PROCESS >~~~~~~~~~~~~~~~\\
-
-let file = require.resolve(__filename)
-fs.watchFile(file, () => {
-	fs.unwatchFile(file)
-	console.log(chalk.redBright(`Update ${__filename}`))
-	delete require.cache[file]
-	require(file)
-});
 
