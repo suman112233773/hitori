@@ -1,6 +1,4 @@
-const fs = require('fs');
-const chalk = require('chalk');
-
+       welcome suman bot
 
 
 //~~~~~~~~~~~~< GLOBAL SETTINGS >~~~~~~~~~~~~\\
@@ -32,10 +30,9 @@ global.fake = {
 }
 
 global.my = {
-	yt: 'https://youtube.com/c/Nazedev',
-	gh: 'https://github.com/nazedev',
-	gc: 'https://chat.whatsapp.com/B5qJIwZHm4VEYZJQE6iMwy',
-	ch: '120363250409960161@newsletter',
+	fb id .https://www.facebook.com/profile.php?id=100014919853209',
+
+
 }
 
 global.limit = {
@@ -65,8 +62,7 @@ global.mess = {
 }
 
 global.APIs = {
-	hitori: 'https://api.hitori.pw',
-}
+	
 global.APIKeys = {
 	'https://api.hitori.pw': 'htrkey-77eb83c0eeb39d40',
 	geminiApikey: ['AIzaSyD0lkGz6ZhKi_MHSSmJcCX3wXoDZhELPaQ','AIzaSyDnBPd_EhBfr73NssnThVQZYiKZVhGZewU','AIzaSyA94OZD-0V4quRbzPb2j75AuzSblPHE75M','AIzaSyB5aTYbUg2VQ0oXr5hdJPN8AyLJcmM84-A','AIzaSyB1xYZ2YImnBdi2Bh-If_8lj6rvSkabqlA']
@@ -78,4 +74,5 @@ global.badWords = ['tolol','goblok','asu','pantek','kampret','ngentot','jancok',
 global.chatLength = 1000
 
 //~~~~~~~~~~~~~~~< PROCESS >~~~~~~~~~~~~~~~\\
+
 
