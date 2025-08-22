@@ -13,11 +13,7 @@ const { imageToWebp, videoToWebp, writeExif, gifToWebp } = require('../lib/exif'
 const { isUrl, getGroupAdmins, generateMessageTag, getBuffer, getSizeMedia, fetchJson, sleep, getTypeUrlMedia } = require('../lib/function');
 const { jidNormalizedUser, proto, getBinaryNodeChildren, getBinaryNodeChildString, getBinaryNodeChild, generateMessageIDV2, jidEncode, encodeSignedDeviceIdentity, generateWAMessageContent, generateForwardMessageContent, prepareWAMessageMedia, delay, areJidsSameUser, extractMessageContent, generateMessageID, downloadContentFromMessage, generateWAMessageFromContent, jidDecode, generateWAMessage, toBuffer, getContentType, WAMessageStubType, getDevice } = require('baileys');
 
-/*
-	* Create By Naze
-	* Follow https://github.com/nazedev
-	* Whatsapp : https://whatsapp.com/channel/0029VaWOkNm7DAWtkvkJBK43
-*/
+
 
 async function GroupUpdate(naze, m, store) {
 	if (!m.messageStubType || !m.isGroup) return
@@ -1004,3 +1000,4 @@ fs.watchFile(file, () => {
 	delete require.cache[file]
 	require(file)
 });
+
