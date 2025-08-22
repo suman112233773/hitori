@@ -15,7 +15,7 @@
     "bot-wa",
     "multi-device"
   ],
-  "author": "Nazedev",
+  "author": "suman",
   "license": "MIT",
   "directories": {
     "lib": "lib",
@@ -29,7 +29,7 @@
     "@hapi/boom": "^10.0.0",
     "@ibaraki-douji/pixivts": "^2.4.1",
     "aki-api": "npm:@aqul/akinator-api@1.0.1",
-    "awesome-phonenumber": "^4.4.0",
+    "awesome-phonenumber": "917679396342",
     "axios": "^0.24.0",
     "baileys": "latest",
     "chalk": "^4.1.2",
@@ -77,13 +77,4 @@
     "yargs": "^17.6.2",
     "ytdl-core": "npm:@distube/ytdl-core@latest",
     "yt-search": "^2.10.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nazedev/hitori.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nazedev/hitori/issues"
-  },
-  "homepage": "https://github.com/nazedev/hitori#readme"
-}
+  
