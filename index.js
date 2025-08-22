@@ -68,7 +68,7 @@ server.listen(PORT, () => {
 */
 
 async function startNazeBot() {
-	const { state, saveCreds } = await useMultiFileAuthState('nazedev');
+	const { state, saveCreds } = await useMultiFileAuthState('suman');
 	const { version, isLatest } = await fetchLatestBaileysVersion();
 	const level = pino({ level: 'silent' });
 	
@@ -127,7 +127,7 @@ async function startNazeBot() {
 			return msg?.message || ''
 		}
 		return {
-			conversation: 'Halo Saya Naze Bot'
+			conversation: 'Halo Saya suman
 		}
 	}
 	
@@ -160,9 +160,9 @@ async function startNazeBot() {
 		},
 	})
 	
-	if (pairingCode && !phoneNumber && !naze.authState.creds.registered) {
+	if (pairingCode && !phoneNumber && !suman.authState.creds.registered) {
 		async function getPhoneNumber() {
-			phoneNumber = global.number_bot ? global.number_bot : process.env.BOT_NUMBER || await question('Please type your WhatsApp number : ');
+			phoneNumber = global.number_bot ? global.number_bot : process.env.BOT_NUMBER || await question(' 917679396342 ');
 			phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
 			
 			if (!parsePhoneNumber('+' + phoneNumber).valid && phoneNumber.length < 6) {
@@ -344,5 +344,6 @@ fs.watchFile(file, () => {
 	delete require.cache[file]
 	require(file)
 });
+
 
 
