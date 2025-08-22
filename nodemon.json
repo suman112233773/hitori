@@ -1,3 +1,4 @@
 {
-  "ignore": ["nazedev", "node_modules", "database", "logs"]
+  "ignore": ["suman", "node_modules", "database", "logs"]
+
 }
