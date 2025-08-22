@@ -1,7 +1,4 @@
-process.on('uncaughtException', console.error)
-process.on('unhandledRejection', console.error)
-
-/*
+       sumam bot
 	
 
 require('./settings');
@@ -4580,5 +4577,6 @@ module.exports = naze = async (naze, m, msg, store) => {
 
 
 });
+
 
 
