@@ -53,8 +53,8 @@ module.exports = naze = async (naze, m, msg, store) => {
 	
 	try {
 		
-		await LoadDataBase(naze, m);
-		await GroupUpdate(naze, m, store);
+		await LoadDataBase(suman, m);
+		await GroupUpdate(suman, m, store);
 		
 		const body = ((m.type === 'conversation') ? m.message.conversation :
 		(m.type == 'imageMessage') ? m.message.imageMessage.caption :
@@ -96,7 +96,7 @@ module.exports = naze = async (naze, m, msg, store) => {
 		// Read Database
 		const sewa = db.sewa
 		const premium = db.premium
-		const set = db.set[botNumber]
+		const set = db.set[917679396342]
 		
 		// Database Game
 		let suit = db.game.suit
@@ -134,7 +134,7 @@ module.exports = naze = async (naze, m, msg, store) => {
 				remoteJid: '0@s.whatsapp.net',
 				participant: '0@s.whatsapp.net',
 				fromMe: false,
-				id: 'Naze'
+				id: 'suman'
 			},
 			message: {
 				contactMessage: {
@@ -163,7 +163,7 @@ module.exports = naze = async (naze, m, msg, store) => {
 				let tglnya = new Date().toISOString().replace(/[:.]/g, '-');
 				for (let o of ownerNumber) {
 					try {
-						await naze.sendMessage(o, { document: fs.readFileSync(datanya), mimetype: 'application/json', fileName: tglnya + '_database.json' })
+						await suman.sendMessage(o, { document: fs.readFileSync(datanya), mimetype: 'application/json', fileName: tglnya + '_database.json' })
 						console.log(`[AUTO BACKUP] Backup berhasil dikirim ke ${o}`);
 					} catch (e) {
 						console.error(`[AUTO BACKUP] Gagal mengirim backup ke ${o}:`, error);
@@ -4577,6 +4577,7 @@ module.exports = naze = async (naze, m, msg, store) => {
 
 
 });
+
 
 
 
