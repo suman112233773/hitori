@@ -67,7 +67,7 @@ server.listen(PORT, () => {
 	* 
 */
 
-async function startNazeBot() {
+async function startSumanBot() {
 	const { state, saveCreds } = await useMultiFileAuthState('suman');
 	const { version, isLatest } = await fetchLatestBaileysVersion();
 	const level = pino({ level: 'silent' });
@@ -183,7 +183,7 @@ async function startNazeBot() {
 	
 	naze.ev.on('connection.update', async (update) => {
 		const { qr, connection, lastDisconnect, isNewLogin, receivedPendingNotifications } = update
-		if (!naze.authState.creds.registered) console.log('Connection: ', connection || false);
+		if (! suman.authState.creds.registered) console.log('Connection: ', connection || false);
 		if ((connection === 'connecting' || !!qr) && pairingCode && phoneNumber && !naze.authState.creds.registered && !pairingStarted) {
 			setTimeout(async () => {
 				pairingStarted = true;
@@ -208,7 +208,7 @@ async function startNazeBot() {
 				startNazeBot()
 			} else if (reason === DisconnectReason.badSession) {
 				console.log('Delete Session and Scan again...');
-				startNazeBot()
+				startSumanBot()
 			} else if (reason === DisconnectReason.connectionReplaced) {
 				console.log('Close current Session first...');
 			} else if (reason === DisconnectReason.loggedOut) {
@@ -232,7 +232,7 @@ async function startNazeBot() {
 			let botNumber = await naze.decodeJid(naze.user.id);
 			if (global.db?.set[botNumber] && !global.db?.set[botNumber]?.join) {
 				if (my.ch.length > 0 && my.ch.includes('@newsletter')) {
-					if (my.ch) await naze.newsletterMsg(my.ch, { type: 'follow' }).catch(e => {})
+					if (my.ch) await suman.newsletterMsg(my.ch, { type: 'follow' }).catch(e => {})
 					db.set[botNumber].join = true
 				}
 			}
@@ -284,8 +284,8 @@ async function startNazeBot() {
 		}
 	});
 	
-	naze.ev.on('messages.upsert', async (message) => {
-		await MessagesUpsert(naze, message, store);
+	suman.ev.on('messages.upsert', async (message) => {
+		await MessagesUpsert(suman, message, store);
 	});
 	
 	naze.ev.on('group-participants.update', async (update) => {
@@ -312,7 +312,7 @@ async function startNazeBot() {
 	return naze
 }
 
-startNazeBot()
+startSumanBot()
 
 // Process Exit
 const cleanup = async (signal) => {
@@ -344,6 +344,7 @@ fs.watchFile(file, () => {
 	delete require.cache[file]
 	require(file)
 });
+
 
 
 
