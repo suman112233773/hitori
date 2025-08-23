@@ -10,12 +10,7 @@ global.botname = 'suman.bot'
 global.packname = 'Bot WhatsApp'
 global.listprefix = ['+','!','.']
 
-/*
-- Setting Author, Packname, Botname sekarang pakai command
-- Walau sudah diganti tidak berubah
-- setbotauthor, setbotpackname, setbotname
-*/
-
+           suman bot
 global.listv = ['•','●','■','✿','▲','➩','➢','➣','➤','✦','✧','△','❀','○','□','♤','♡','◇','♧','々','〆']
 global.tempatDB = 'database.json' // Taruh url mongodb di sini jika menggunakan mongodb. Format : 'mongodb+srv://...'
 global.tempatStore = 'baileys_store.json' // Taruh url mongodb di sini jika menggunakan mongodb. Format : 'mongodb+srv://...'
@@ -75,3 +70,4 @@ global.chatLength = 1000
 //~~~~~~~~~~~~~~~< PROCESS >~~~~~~~~~~~~~~~\\
 
            thank you 😊 🙏 
+
